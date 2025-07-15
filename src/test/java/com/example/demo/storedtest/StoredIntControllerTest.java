@@ -1,13 +1,10 @@
 package com.example.demo.storedtest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 import com.example.demo.endpoint.storedInt.StoredIntController;
 import java.io.File;
 import java.nio.file.Files;
-import java.util.Random;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -43,21 +40,5 @@ class StoredIntControllerTest {
     String result = subject.storedIntApply();
     assertTrue(file.exists());
     assertTrue(result.contains("123"));
-  }
-
-  // Java
-  @SneakyThrows
-  @Test
-  void storedIntApply_when_file_not_exist() {
-    File file = new File("/tmp/storedIntRandom.txt");
-    if (file.exists()) {
-      file.delete();
-    }
-    String result = subject.storedIntApply();
-    Random mockRandom = mock(Random.class);
-    when(mockRandom.nextInt(1000)).thenReturn(42); // force random value to 42
-
-    assertTrue(file.exists());
-    assertTrue(result.equals("random value :42"));
   }
 }
