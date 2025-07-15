@@ -34,10 +34,10 @@ class StoredIntControllerTest {
   @SneakyThrows
   @Test
   void storedIntApply_when_file_exist() {
-    File file = File.createTempFile("storedIntRandom", ".txt");
-    String result = subject.storedIntApply();
+    File file = new File("/tmp/storedIntRandom.txt");
     String number = "123";
     Files.writeString(file.toPath(), number);
+    String result = subject.storedIntApply();
     assertTrue(file.exists());
     assertTrue(result.contains("123"));
   }
