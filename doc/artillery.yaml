@@ -1,5 +1,5 @@
 config:
-  target: "https://icvqtpizddtkk7jozh54bprx2m0sjcjd.lambda-url.eu-west-3.on.aws"
+  target: "https://k37g6igaznsybeqqelwz55ilde0tvpnb.lambda-url.eu-west-3.on.aws"
   phases:
     - duration: 60
       arrivalRate: 50
