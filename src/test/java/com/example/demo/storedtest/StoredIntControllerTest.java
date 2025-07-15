@@ -1,5 +1,6 @@
 package com.example.demo.storedtest;
 
+import com.example.demo.endpoint.storedInt.StoredIntController;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
