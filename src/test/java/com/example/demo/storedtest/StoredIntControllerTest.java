@@ -1,15 +1,14 @@
 package com.example.demo.storedtest;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.example.demo.endpoint.storedInt.StoredIntController;
+import java.io.File;
+import java.nio.file.Files;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.io.File;
-import java.nio.file.Files;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class StoredIntControllerTest {
   StoredIntController subject = new StoredIntController();
